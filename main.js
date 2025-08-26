@@ -75,10 +75,11 @@ class VersionInfoPlugin extends Plugin {
     onunload() {
     }
 
+    // 激活视图
     async activateView() {
         const { workspace } = this.app;
 
-        let leaf = null;
+        let leaf;
         const leaves = workspace.getLeavesOfType(VIEW_TYPE_VERSION_INFO).filter(leaf => leaf.view instanceof VersionInfoView)
 
         if (leaves.length > 0) {
