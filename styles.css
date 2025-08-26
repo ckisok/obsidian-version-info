@@ -1,0 +1,20 @@
+.workspace-leaf-content[data-type="version-info-view"] {
+    & > .view-content {
+        background: #fff;
+        & > h3 {
+            margin-block: 20px;
+        }
+
+        & > table {
+            width: 100%;
+            margin-block: 10px;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+
+            td, th {
+                padding: 10px;
+                border: 1px solid #ccc;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-version-info",
+  "name": "Version Info",
+  "author": "ckisok",
+  "authorUrl": "https://github.com/ckisok",
+  "description": "查看obsidian及底层框架版本信息的小插件。",
+  "version": "0.0.1",
+  "isDesktopOnly": true,
+  "minAppVersion": "1.0.0"
+}
