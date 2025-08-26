@@ -1,12 +1,10 @@
 {
   "name": "obsidian-version-info",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.0.1",
+  "description": "查看 obsidian 及底层框架版本信息的小插件。",
   "private": true,
+  "scripts": {
+  },
   "devDependencies": {
     "obsidian": "latest"
   }

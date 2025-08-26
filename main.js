@@ -1,4 +1,5 @@
 const {Plugin, ItemView, apiVersion} = require("obsidian")
+let { app } = require("electron").remote;
 
 const VIEW_TYPE_VERSION_INFO = 'version-info-view';
 
@@ -30,7 +31,7 @@ class VersionInfoView extends ItemView {
         const {contentEl} = this
         contentEl.empty()
 
-        contentEl.createEl('h3', { text: 'Basic' });
+        contentEl.createEl('h3', { text: '版本信息' });
 
         // Create the table element
         const table = contentEl.createEl('table');
@@ -45,12 +46,13 @@ class VersionInfoView extends ItemView {
         const tbody = table.createEl('tbody');
 
         // Add some info rows
-        this.addRow(tbody, 'platform', process.platform)
-        this.addRow(tbody, 'arch', process.arch)
-        this.addRow(tbody, 'node', process.versions.node)
+        this.addRow(tbody, 'installer', app.getVersion())
+        this.addRow(tbody, 'version', apiVersion)
         this.addRow(tbody, 'chrome', process.versions.chrome)
         this.addRow(tbody, 'electron', process.versions.electron)
-        this.addRow(tbody, 'apiVersion', apiVersion)
+        this.addRow(tbody, 'node', process.versions.node)
+        this.addRow(tbody, 'platform', process.platform)
+        this.addRow(tbody, 'arch', process.arch)
     }
 
     async onClose() {
