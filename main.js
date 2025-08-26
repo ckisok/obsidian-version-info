@@ -1,5 +1,5 @@
 const {Plugin, ItemView, apiVersion} = require("obsidian")
-let { app } = require("electron").remote;
+let { app } = require("@electron/remote");
 
 const VIEW_TYPE_VERSION_INFO = 'version-info-view';
 
@@ -27,7 +27,6 @@ class VersionInfoView extends ItemView {
     }
 
     async onOpen() {
-        console.log(process)
         const {contentEl} = this
         contentEl.empty()
 

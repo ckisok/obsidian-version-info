@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "查看 obsidian 及底层框架版本信息的小插件。",
   "private": true,
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
+    "@electron/remote": "^2.1.3",
+    "electron": "^37.3.1",
     "obsidian": "latest"
   }
 }
